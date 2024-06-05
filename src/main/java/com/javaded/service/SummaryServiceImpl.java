@@ -1,5 +1,6 @@
 package com.javaded.service;
 
+import com.javaded.model.Data;
 import com.javaded.model.MeasurementType;
 import com.javaded.model.SummaryType;
 import com.javaded.model.exception.SensorNotFoundException;
@@ -28,6 +29,11 @@ public class SummaryServiceImpl implements SummaryService {
                         summaryTypes == null ? Set.of(SummaryType.values()) : summaryTypes
                 )
                 .orElseThrow(SensorNotFoundException::new);
+    }
+
+    @Override
+    public void handle(Data data) {
+        summaryRepository.handle(data);
     }
 
 }

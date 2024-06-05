@@ -1,5 +1,6 @@
 package com.javaded.repository;
 
+import com.javaded.model.Data;
 import com.javaded.model.MeasurementType;
 import com.javaded.model.Summary;
 import com.javaded.model.SummaryType;
@@ -14,5 +15,7 @@ public interface SummaryRepository {
             Set<MeasurementType> measurementTypes,
             Set<SummaryType> summaryTypes
     );
+
+    void handle(Data data);
 
 }

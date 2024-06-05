@@ -1,5 +1,6 @@
 package com.javaded.service;
 
+import com.javaded.model.Data;
 import com.javaded.model.MeasurementType;
 import com.javaded.model.Summary;
 import com.javaded.model.SummaryType;
@@ -13,5 +14,7 @@ public interface SummaryService {
             Set<MeasurementType> measurementTypes,
             Set<SummaryType> summaryTypes
     );
+
+    void handle(Data data);
 
 }
