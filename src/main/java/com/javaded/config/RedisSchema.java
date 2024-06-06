@@ -15,6 +15,11 @@ public class RedisSchema {
             MeasurementType measurementType
     ) {
         return KeyHelper.getKey("sensors:" + sensorId + ":" + measurementType.name().toLowerCase());
+        //app:sensors:1:power
+            //avg: 1
+            //min: 0.1
+            //max: 1.1
+            //sum: .....
     }
 
 }
