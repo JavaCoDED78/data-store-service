@@ -20,3 +20,36 @@ presented.
 
 Just after startup application will try to connect to Apache Kafka and begin to
 listen topics from `data` topic created by Debezium.
+
+Application has the following endpoint:
+* GET `/api/v1//analytics/summary/{sensorId}`
+#### Example JSON
+```json
+{
+  "sensorId": 3,
+  "values": {
+    "TEMPERATURE": [
+      {
+        "type": "SUM",
+        "value": 196.47341243456194,
+        "counter": 11
+      },
+      {
+        "type": "AVG",
+        "value": 17.861219312232905,
+        "counter": 11
+      },
+      {
+        "type": "MAX",
+        "value": 19.72574748697943,
+        "counter": 11
+      },
+      {
+        "type": "MIN",
+        "value": 15.58884202291292,
+        "counter": 11
+      }
+    ]
+  }
+}
+```
